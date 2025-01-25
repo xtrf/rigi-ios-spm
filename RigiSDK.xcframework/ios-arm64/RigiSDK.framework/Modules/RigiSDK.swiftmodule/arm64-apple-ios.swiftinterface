@@ -11,131 +11,6 @@ import Vision
 import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
-public struct ServerCredentials {
-}
-public struct ScanResult {
-}
-public struct LabelInfo {
-}
-@_hasMissingDesignatedInitializers public class RigiScanner {
-  public static let shared: RigiSDK.RigiScanner
-  public func performScan() async
-  @objc deinit
-}
-@_hasMissingDesignatedInitializers public class RigiScannerOcr {
-  public static let shared: RigiSDK.RigiScannerOcr
-  public func performScan() async -> RigiSDK.ScanResult?
-  @objc deinit
-}
-public class RigiButtonManager {
-  public static let shared: RigiSDK.RigiButtonManager
-  public init()
-  public func initButton(callback: @escaping () async -> Swift.Void)
-  @_Concurrency.MainActor public func hideButton()
-  @_Concurrency.MainActor public func showButton()
-  @objc deinit
-}
-@_hasMissingDesignatedInitializers public class RigiScreenshotter {
-  @_Concurrency.MainActor public static func appWindow() -> UIKit.UIWindow?
-  @_Concurrency.MainActor public static func getScreenshot() -> UIKit.UIImage?
-  @objc deinit
-}
-public struct RigiSettings {
-  public enum ClipBounds {
-    case screen
-    case upperViewController
-    public static func == (a: RigiSDK.RigiSettings.ClipBounds, b: RigiSDK.RigiSettings.ClipBounds) -> Swift.Bool
-    public func hash(into hasher: inout Swift.Hasher)
-    public var hashValue: Swift.Int {
-      get
-    }
-  }
-  public enum DivPosition {
-    case topleft
-    case center
-    public static func == (a: RigiSDK.RigiSettings.DivPosition, b: RigiSDK.RigiSettings.DivPosition) -> Swift.Bool
-    public func hash(into hasher: inout Swift.Hasher)
-    public var hashValue: Swift.Int {
-      get
-    }
-  }
-  public enum AlignmentStrategy {
-    case left
-    case center
-    case neighbours
-    public static func == (a: RigiSDK.RigiSettings.AlignmentStrategy, b: RigiSDK.RigiSettings.AlignmentStrategy) -> Swift.Bool
-    public func hash(into hasher: inout Swift.Hasher)
-    public var hashValue: Swift.Int {
-      get
-    }
-  }
-  public var ocrDebugScanning: Swift.Bool
-  public var ocrDebugMatching: Swift.Bool
-  public var ocrUseAccurateScanning: Swift.Bool
-  public var ocrStrokeColorTolerance: Swift.Double
-  public var ocrStrokeLineOffsets: [CoreFoundation.CGFloat]
-  public var ocrAlignmentStrategy: RigiSDK.RigiSettings.AlignmentStrategy
-  public var ocrAlignmentMargin: Swift.Int
-  public var ocrAlignmentDifferenceTreshhold: Swift.Int
-  public var ocrAlignmentColorTolerance: Swift.Double
-  public var loggingEnabled: Swift.Bool
-  public var isButtonVisible: Swift.Bool
-  public var addFileTimestamps: Swift.Bool
-  public var enableAutoScanning: Swift.Bool
-  public var autoScanInterval: Swift.Double
-  public var autoScanCaptureDelay: Swift.Double
-  public var onlyScanUpperViewController: Swift.Bool
-  public var autoClearTextFields: Swift.Bool
-  public var additionalUpperViewControllers: [Swift.String]
-  public var minimumOnscreenHorz: Swift.Double
-  public var minimumOnscreenVert: Swift.Double
-  public var clipOffscreen: Swift.Bool
-  public var clipStyle: RigiSDK.RigiSettings.ClipBounds
-  public var expandToButton: Swift.Bool
-  public var addDeviceBezels: Swift.Bool
-  public var previewPosition: RigiSDK.RigiSettings.DivPosition
-  public var addLabelBorders: Swift.Bool
-  public var labelBorderColor: Swift.String
-  public var includeAppleWebFonts: Swift.Bool
-  public var includedAppleWebFonts: Swift.String
-  public var includedFontStyles: Swift.String
-  public var includedBodyStyles: Swift.String
-  public var fontStyleClasses: [Swift.String : Swift.String]
-}
-@_hasMissingDesignatedInitializers public class Rigi {
-  public static let version: Swift.String
-  public static let shared: RigiSDK.Rigi
-  public static func start(_ configuration: ((inout RigiSDK.RigiSettings) -> Swift.Void)? = nil)
-  public func launch()
-  @objc deinit
-}
-@_hasMissingDesignatedInitializers public class RigiPreviews {
-  public static let shared: RigiSDK.RigiPreviews
-  public func savePreview(scanResult: RigiSDK.ScanResult)
-  @objc deinit
-}
-public var debugLoggingEnabled: Swift.Bool
-public enum RigiLogLevel : Swift.String {
-  case debug
-  case verbose
-  case warning
-  case error
-  public init?(rawValue: Swift.String)
-  public typealias RawValue = Swift.String
-  public var rawValue: Swift.String {
-    get
-  }
-}
-@_hasMissingDesignatedInitializers public class RigiLogger {
-  public static func log(_ level: RigiSDK.RigiLogLevel = .verbose, _ message: Swift.String, _ error: (any Swift.Error)? = nil)
-  @objc deinit
-}
-@_hasMissingDesignatedInitializers public class RigiDebug {
-  public static var data: Swift.String
-  public static func clear()
-  public static func add(_ message: Swift.String)
-  @objc deinit
-}
 extension Swift.String {
   public var rigiKey: Swift.String? {
     get
@@ -150,12 +25,6 @@ extension Swift.String {
 extension Swift.String {
   public mutating func replaceGroups(matching regex: Foundation.NSRegularExpression, with template: Swift.String, options: Foundation.NSRegularExpression.MatchingOptions = [])
   public func replacingGroups(matching regex: Foundation.NSRegularExpression, with transformationString: Swift.String) -> Swift.String
-}
-@_hasMissingDesignatedInitializers public class RigiFileSystem {
-  public static var rigiDir: Swift.String? {
-    get
-  }
-  @objc deinit
 }
 public struct RigiString : Swift.Codable {
   public let fileOriginal: Swift.String
@@ -188,6 +57,137 @@ public struct RigiString : Swift.Codable {
   public func getPseudoLanguage() -> Swift.String?
   public func pseudoPrefix() -> Swift.String
   public func pseudoSuffix() -> Swift.String
+  @objc deinit
+}
+public struct ScanResult {
+}
+public struct LabelInfo {
+}
+@_hasMissingDesignatedInitializers public class RigiScanner {
+  public static let shared: RigiSDK.RigiScanner
+  public func performScan() async
+  @objc deinit
+}
+public class RigiButtonManager {
+  public static let shared: RigiSDK.RigiButtonManager
+  public init()
+  public func initButton(callback: @escaping () async -> Swift.Void)
+  @_Concurrency.MainActor public func hideButton()
+  @_Concurrency.MainActor public func showButton()
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class RigiPreviews {
+  public static let shared: RigiSDK.RigiPreviews
+  public func savePreview(scanResult: RigiSDK.ScanResult)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class RigiScreenshotter {
+  @_Concurrency.MainActor public static func appWindow() -> UIKit.UIWindow?
+  @_Concurrency.MainActor public static func getScreenshot() -> UIKit.UIImage?
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class RigiScannerOcr {
+  public static let shared: RigiSDK.RigiScannerOcr
+  public func performScan() async -> RigiSDK.ScanResult?
+  @objc deinit
+}
+public struct RigiSettings {
+  public enum ClipBounds {
+    case screen
+    case upperViewController
+    public static func == (a: RigiSDK.RigiSettings.ClipBounds, b: RigiSDK.RigiSettings.ClipBounds) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public enum DivPosition {
+    case topleft
+    case center
+    public static func == (a: RigiSDK.RigiSettings.DivPosition, b: RigiSDK.RigiSettings.DivPosition) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public enum AlignmentStrategy {
+    case left
+    case center
+    case neighbours
+    public static func == (a: RigiSDK.RigiSettings.AlignmentStrategy, b: RigiSDK.RigiSettings.AlignmentStrategy) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public var debugScanning: Swift.Bool
+  public var debugMatching: Swift.Bool
+  public var useAccurateScanning: Swift.Bool
+  public var strokeColorTolerance: Swift.Double
+  public var strokeLineOffsets: [CoreFoundation.CGFloat]
+  public var alignmentStrategy: RigiSDK.RigiSettings.AlignmentStrategy
+  public var alignmentMargin: Swift.Int
+  public var alignmentDifferenceTreshhold: Swift.Int
+  public var alignmentColorTolerance: Swift.Double
+  public var loggingEnabled: Swift.Bool
+  public var isButtonVisible: Swift.Bool
+  public var addFileTimestamps: Swift.Bool
+  public var enableAutoScanning: Swift.Bool
+  public var autoScanInterval: Swift.Double
+  public var autoScanCaptureDelay: Swift.Double
+  public var onlyScanUpperViewController: Swift.Bool
+  public var autoClearTextFields: Swift.Bool
+  public var additionalUpperViewControllers: [Swift.String]
+  public var minimumOnscreenHorz: Swift.Double
+  public var minimumOnscreenVert: Swift.Double
+  public var clipOffscreen: Swift.Bool
+  public var clipStyle: RigiSDK.RigiSettings.ClipBounds
+  public var expandToButton: Swift.Bool
+  public var addDeviceBezels: Swift.Bool
+  public var previewPosition: RigiSDK.RigiSettings.DivPosition
+  public var addLabelBorders: Swift.Bool
+  public var labelBorderColor: Swift.String
+  public var includeAppleWebFonts: Swift.Bool
+  public var includedAppleWebFonts: Swift.String
+  public var includedFontStyles: Swift.String
+  public var includedBodyStyles: Swift.String
+  public var fontStyleClasses: [Swift.String : Swift.String]
+}
+@_hasMissingDesignatedInitializers public class Rigi {
+  public static let version: Swift.String
+  public static let shared: RigiSDK.Rigi
+  public static func start(_ configuration: ((inout RigiSDK.RigiSettings) -> Swift.Void)? = nil)
+  public func launch()
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class RigiFileSystem {
+  public static var rigiDir: Swift.String? {
+    get
+  }
+  @objc deinit
+}
+public struct ServerCredentials {
+}
+@_hasMissingDesignatedInitializers public class RigiDebug {
+  public static var data: Swift.String
+  public static func clear()
+  public static func add(_ message: Swift.String)
+  @objc deinit
+}
+public var debugLoggingEnabled: Swift.Bool
+public enum RigiLogLevel : Swift.String {
+  case debug
+  case verbose
+  case warning
+  case error
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers public class RigiLogger {
+  public static func log(_ level: RigiSDK.RigiLogLevel = .verbose, _ message: Swift.String, _ error: (any Swift.Error)? = nil)
   @objc deinit
 }
 @_hasMissingDesignatedInitializers public class Output {
