@@ -1,6 +1,6 @@
 // swift-interface-format-version: 1.0
 // swift-compiler-version: Apple Swift version 6.0.3 effective-5.10 (swiftlang-6.0.3.1.10 clang-1600.0.30.1)
-// swift-module-flags: -target x86_64-apple-ios15.6-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -enable-experimental-feature OpaqueTypeErasure -enable-bare-slash-regex -module-name RigiSDK
+// swift-module-flags: -target x86_64-apple-ios15.6-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name RigiSDK
 import Compression
 import CryptoKit
 import Foundation
@@ -11,20 +11,7 @@ import Vision
 import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
-@_hasMissingDesignatedInitializers public class RigiIni {
-  public static let shared: RigiSDK.RigiIni
-  public func load(from path: Swift.String? = nil) throws
-  public func value(for key: Swift.String) -> Swift.String?
-  public var allSettings: [Swift.String : Swift.String] {
-    get
-  }
-  public func getServerCredentials() throws -> RigiSDK.ServerCredentials
-  public func getProjectUrl() throws -> Swift.String
-  public func getSourceLanguage() -> Swift.String?
-  public func getPseudoLanguage() -> Swift.String?
-  public func pseudoPrefix() -> Swift.String
-  public func pseudoSuffix() -> Swift.String
-  @objc deinit
+public struct ServerCredentials {
 }
 extension Swift.String {
   public var rigiKey: Swift.String? {
@@ -47,24 +34,6 @@ extension Swift.String {
   }
   @objc deinit
 }
-public struct RigiString : Swift.Codable {
-  public let fileOriginal: Swift.String
-  public let unitId: Swift.String
-  public let source: Swift.String
-  public let stringId: Swift.String
-  public let scannableString: Swift.String
-  public let tokenisedString: Swift.String?
-  public let signature: Swift.String?
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
-}
-@_hasMissingDesignatedInitializers public class RigiStrings {
-  public static let shared: RigiSDK.RigiStrings
-  public var strings: [Swift.String : RigiSDK.RigiString]
-  public func load() throws
-  public func findString(scanned: Swift.String) -> RigiSDK.RigiString?
-  @objc deinit
-}
 @_hasMissingDesignatedInitializers public class Output {
   public static func log(_ line: Swift.String? = nil)
   public static func step(_ line: Swift.String)
@@ -81,9 +50,59 @@ public struct RigiString : Swift.Codable {
   public static func uploadPreviews(rigiFolder: Swift.String) async throws
   @objc deinit
 }
-@_hasMissingDesignatedInitializers public class RigiScreenshotter {
-  @_Concurrency.MainActor public static func appWindow() -> UIKit.UIWindow?
-  @_Concurrency.MainActor public static func getScreenshot() -> UIKit.UIImage?
+@_hasMissingDesignatedInitializers public class RigiIni {
+  public static let shared: RigiSDK.RigiIni
+  public func load(from path: Swift.String? = nil) throws
+  public func value(for key: Swift.String) -> Swift.String?
+  public var allSettings: [Swift.String : Swift.String] {
+    get
+  }
+  public func getServerCredentials() throws -> RigiSDK.ServerCredentials
+  public func getProjectUrl() throws -> Swift.String
+  public func getSourceLanguage() -> Swift.String?
+  public func getPseudoLanguage() -> Swift.String?
+  public func pseudoPrefix() -> Swift.String
+  public func pseudoSuffix() -> Swift.String
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class RigiDebug {
+  public static var data: Swift.String
+  public static func clear()
+  public static func add(_ message: Swift.String)
+  @objc deinit
+}
+public var debugLoggingEnabled: Swift.Bool
+public enum RigiLogLevel : Swift.String {
+  case debug
+  case verbose
+  case warning
+  case error
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers public class RigiLogger {
+  public static func log(_ level: RigiSDK.RigiLogLevel = .verbose, _ message: Swift.String, _ error: (any Swift.Error)? = nil)
+  @objc deinit
+}
+public struct RigiString : Swift.Codable {
+  public let fileOriginal: Swift.String
+  public let unitId: Swift.String
+  public let source: Swift.String
+  public let stringId: Swift.String
+  public let scannableString: Swift.String
+  public let tokenisedString: Swift.String?
+  public let signature: Swift.String?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+@_hasMissingDesignatedInitializers public class RigiStrings {
+  public static let shared: RigiSDK.RigiStrings
+  public var strings: [Swift.String : RigiSDK.RigiString]
+  public func load() throws
+  public func findString(scanned: Swift.String) -> RigiSDK.RigiString?
   @objc deinit
 }
 public struct RigiSettings {
@@ -148,26 +167,6 @@ public struct RigiSettings {
   public var includedBodyStyles: Swift.String
   public var fontStyleClasses: [Swift.String : Swift.String]
 }
-public class RigiButtonManager {
-  public static let shared: RigiSDK.RigiButtonManager
-  public init()
-  public func initButton(callback: @escaping () async -> Swift.Void)
-  @_Concurrency.MainActor public func hideButton()
-  @_Concurrency.MainActor public func showButton()
-  @objc deinit
-}
-@_hasMissingDesignatedInitializers public class Rigi {
-  public static let version: Swift.String
-  public static let shared: RigiSDK.Rigi
-  public static func start(_ configuration: ((inout RigiSDK.RigiSettings) -> Swift.Void)? = nil)
-  public func launch()
-  @objc deinit
-}
-@_hasMissingDesignatedInitializers public class RigiScannerOcr {
-  public static let shared: RigiSDK.RigiScannerOcr
-  public func performScan() async -> RigiSDK.ScanResult?
-  @objc deinit
-}
 public struct ScanResult {
 }
 public struct LabelInfo {
@@ -177,41 +176,42 @@ public struct LabelInfo {
   public func performScan() async
   @objc deinit
 }
+@_hasMissingDesignatedInitializers public class Rigi {
+  public static let version: Swift.String
+  public static let shared: RigiSDK.Rigi
+  public static func start(_ configuration: ((inout RigiSDK.RigiSettings) -> Swift.Void)? = nil)
+  public func launch()
+  @objc deinit
+}
+public class RigiButtonManager {
+  public static let shared: RigiSDK.RigiButtonManager
+  public init()
+  public func initButton(callback: @escaping () async -> Swift.Void)
+  @_Concurrency.MainActor public func hideButton()
+  @_Concurrency.MainActor public func showButton()
+  @objc deinit
+}
 @_hasMissingDesignatedInitializers public class RigiPreviews {
   public static let shared: RigiSDK.RigiPreviews
   public func savePreview(scanResult: RigiSDK.ScanResult)
   @objc deinit
 }
-public var debugLoggingEnabled: Swift.Bool
-public enum RigiLogLevel : Swift.String {
-  case debug
-  case verbose
-  case warning
-  case error
-  public init?(rawValue: Swift.String)
-  public typealias RawValue = Swift.String
-  public var rawValue: Swift.String {
-    get
-  }
-}
-@_hasMissingDesignatedInitializers public class RigiLogger {
-  public static func log(_ level: RigiSDK.RigiLogLevel = .verbose, _ message: Swift.String, _ error: (any Swift.Error)? = nil)
+@_hasMissingDesignatedInitializers public class RigiScannerOcr {
+  public static let shared: RigiSDK.RigiScannerOcr
+  public func performScan() async -> RigiSDK.ScanResult?
   @objc deinit
 }
-public struct ServerCredentials {
-}
-@_hasMissingDesignatedInitializers public class RigiDebug {
-  public static var data: Swift.String
-  public static func clear()
-  public static func add(_ message: Swift.String)
+@_hasMissingDesignatedInitializers public class RigiScreenshotter {
+  @_Concurrency.MainActor public static func appWindow() -> UIKit.UIWindow?
+  @_Concurrency.MainActor public static func getScreenshot() -> UIKit.UIImage?
   @objc deinit
 }
+extension RigiSDK.RigiLogLevel : Swift.Equatable {}
+extension RigiSDK.RigiLogLevel : Swift.Hashable {}
+extension RigiSDK.RigiLogLevel : Swift.RawRepresentable {}
 extension RigiSDK.RigiSettings.ClipBounds : Swift.Equatable {}
 extension RigiSDK.RigiSettings.ClipBounds : Swift.Hashable {}
 extension RigiSDK.RigiSettings.DivPosition : Swift.Equatable {}
 extension RigiSDK.RigiSettings.DivPosition : Swift.Hashable {}
 extension RigiSDK.RigiSettings.AlignmentStrategy : Swift.Equatable {}
 extension RigiSDK.RigiSettings.AlignmentStrategy : Swift.Hashable {}
-extension RigiSDK.RigiLogLevel : Swift.Equatable {}
-extension RigiSDK.RigiLogLevel : Swift.Hashable {}
-extension RigiSDK.RigiLogLevel : Swift.RawRepresentable {}
