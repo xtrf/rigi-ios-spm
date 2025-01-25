@@ -15,14 +15,258 @@
         ]
       },
       {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "RigiSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
         "kind": "TypeDecl",
-        "name": "RigiFileSystem",
-        "printedName": "RigiFileSystem",
+        "name": "RigiIni",
+        "printedName": "RigiIni",
         "children": [
           {
             "kind": "Var",
-            "name": "rigiDir",
-            "printedName": "rigiDir",
+            "name": "shared",
+            "printedName": "shared",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "RigiIni",
+                "printedName": "RigiSDK.RigiIni",
+                "usr": "s:7RigiSDK0A3IniC"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:7RigiSDK0A3IniC6sharedACvpZ",
+            "mangledName": "$s7RigiSDK0A3IniC6sharedACvpZ",
+            "moduleName": "RigiSDK",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "RigiIni",
+                    "printedName": "RigiSDK.RigiIni",
+                    "usr": "s:7RigiSDK0A3IniC"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7RigiSDK0A3IniC6sharedACvgZ",
+                "mangledName": "$s7RigiSDK0A3IniC6sharedACvgZ",
+                "moduleName": "RigiSDK",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "load",
+            "printedName": "load(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:7RigiSDK0A3IniC4load4fromySSSg_tKF",
+            "mangledName": "$s7RigiSDK0A3IniC4load4fromySSSg_tKF",
+            "moduleName": "RigiSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "value",
+            "printedName": "value(for:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:7RigiSDK0A3IniC5value3forSSSgSS_tF",
+            "mangledName": "$s7RigiSDK0A3IniC5value3forSSSgSS_tF",
+            "moduleName": "RigiSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "allSettings",
+            "printedName": "allSettings",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:SD"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:7RigiSDK0A3IniC11allSettingsSDyS2SGvp",
+            "mangledName": "$s7RigiSDK0A3IniC11allSettingsSDyS2SGvp",
+            "moduleName": "RigiSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Swift.String]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7RigiSDK0A3IniC11allSettingsSDyS2SGvg",
+                "mangledName": "$s7RigiSDK0A3IniC11allSettingsSDyS2SGvg",
+                "moduleName": "RigiSDK",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "getServerCredentials",
+            "printedName": "getServerCredentials()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ServerCredentials",
+                "printedName": "RigiSDK.ServerCredentials",
+                "usr": "s:7RigiSDK17ServerCredentialsV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:7RigiSDK0A3IniC20getServerCredentialsAA0eF0VyKF",
+            "mangledName": "$s7RigiSDK0A3IniC20getServerCredentialsAA0eF0VyKF",
+            "moduleName": "RigiSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getProjectUrl",
+            "printedName": "getProjectUrl()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:7RigiSDK0A3IniC13getProjectUrlSSyKF",
+            "mangledName": "$s7RigiSDK0A3IniC13getProjectUrlSSyKF",
+            "moduleName": "RigiSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getSourceLanguage",
+            "printedName": "getSourceLanguage()",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -39,52 +283,90 @@
                 "usr": "s:Sq"
               }
             ],
-            "declKind": "Var",
-            "usr": "s:7RigiSDK0A10FileSystemC7rigiDirSSSgvpZ",
-            "mangledName": "$s7RigiSDK0A10FileSystemC7rigiDirSSSgvpZ",
+            "declKind": "Func",
+            "usr": "s:7RigiSDK0A3IniC17getSourceLanguageSSSgyF",
+            "mangledName": "$s7RigiSDK0A3IniC17getSourceLanguageSSSgyF",
             "moduleName": "RigiSDK",
-            "static": true,
             "declAttributes": [
-              "Final",
               "AccessControl"
             ],
-            "accessors": [
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getPseudoLanguage",
+            "printedName": "getPseudoLanguage()",
+            "children": [
               {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "Swift.String?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      }
-                    ],
-                    "usr": "s:Sq"
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
                   }
                 ],
-                "declKind": "Accessor",
-                "usr": "s:7RigiSDK0A10FileSystemC7rigiDirSSSgvgZ",
-                "mangledName": "$s7RigiSDK0A10FileSystemC7rigiDirSSSgvgZ",
-                "moduleName": "RigiSDK",
-                "static": true,
-                "declAttributes": [
-                  "Final"
-                ],
-                "accessorKind": "get"
+                "usr": "s:Sq"
               }
-            ]
+            ],
+            "declKind": "Func",
+            "usr": "s:7RigiSDK0A3IniC17getPseudoLanguageSSSgyF",
+            "mangledName": "$s7RigiSDK0A3IniC17getPseudoLanguageSSSgyF",
+            "moduleName": "RigiSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "pseudoPrefix",
+            "printedName": "pseudoPrefix()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:7RigiSDK0A3IniC12pseudoPrefixSSyF",
+            "mangledName": "$s7RigiSDK0A3IniC12pseudoPrefixSSyF",
+            "moduleName": "RigiSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "pseudoSuffix",
+            "printedName": "pseudoSuffix()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:7RigiSDK0A3IniC12pseudoSuffixSSyF",
+            "mangledName": "$s7RigiSDK0A3IniC12pseudoSuffixSSyF",
+            "moduleName": "RigiSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Class",
-        "usr": "s:7RigiSDK0A10FileSystemC",
-        "mangledName": "$s7RigiSDK0A10FileSystemC",
+        "usr": "s:7RigiSDK0A3IniC",
+        "mangledName": "$s7RigiSDK0A3IniC",
         "moduleName": "RigiSDK",
         "declAttributes": [
           "AccessControl"
@@ -115,236 +397,6 @@
         "moduleName": "RigiSDK",
         "declAttributes": [
           "RawDocComment"
-        ]
-      },
-      {
-        "kind": "TypeDecl",
-        "name": "RigiDebug",
-        "printedName": "RigiDebug",
-        "children": [
-          {
-            "kind": "Var",
-            "name": "data",
-            "printedName": "data",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:7RigiSDK0A5DebugC4dataSSvpZ",
-            "mangledName": "$s7RigiSDK0A5DebugC4dataSSvpZ",
-            "moduleName": "RigiSDK",
-            "static": true,
-            "declAttributes": [
-              "HasInitialValue",
-              "Final",
-              "HasStorage",
-              "AccessControl"
-            ],
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:7RigiSDK0A5DebugC4dataSSvgZ",
-                "mangledName": "$s7RigiSDK0A5DebugC4dataSSvgZ",
-                "moduleName": "RigiSDK",
-                "static": true,
-                "implicit": true,
-                "declAttributes": [
-                  "Final"
-                ],
-                "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:7RigiSDK0A5DebugC4dataSSvsZ",
-                "mangledName": "$s7RigiSDK0A5DebugC4dataSSvsZ",
-                "moduleName": "RigiSDK",
-                "static": true,
-                "implicit": true,
-                "declAttributes": [
-                  "Final"
-                ],
-                "accessorKind": "set"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Modify",
-                "printedName": "Modify()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:7RigiSDK0A5DebugC4dataSSvMZ",
-                "mangledName": "$s7RigiSDK0A5DebugC4dataSSvMZ",
-                "moduleName": "RigiSDK",
-                "static": true,
-                "implicit": true,
-                "declAttributes": [
-                  "Final"
-                ],
-                "accessorKind": "_modify"
-              }
-            ]
-          },
-          {
-            "kind": "Function",
-            "name": "clear",
-            "printedName": "clear()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:7RigiSDK0A5DebugC5clearyyFZ",
-            "mangledName": "$s7RigiSDK0A5DebugC5clearyyFZ",
-            "moduleName": "RigiSDK",
-            "static": true,
-            "declAttributes": [
-              "Final",
-              "AccessControl"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "add",
-            "printedName": "add(_:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:7RigiSDK0A5DebugC3addyySSFZ",
-            "mangledName": "$s7RigiSDK0A5DebugC3addyySSFZ",
-            "moduleName": "RigiSDK",
-            "static": true,
-            "declAttributes": [
-              "Final",
-              "AccessControl"
-            ],
-            "funcSelfKind": "NonMutating"
-          }
-        ],
-        "declKind": "Class",
-        "usr": "s:7RigiSDK0A5DebugC",
-        "mangledName": "$s7RigiSDK0A5DebugC",
-        "moduleName": "RigiSDK",
-        "declAttributes": [
-          "AccessControl",
-          "RawDocComment"
-        ],
-        "hasMissingDesignatedInitializers": true,
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          }
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "RigiSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "RigiSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "TypeDecl",
-        "name": "ServerCredentials",
-        "printedName": "ServerCredentials",
-        "declKind": "Struct",
-        "usr": "s:7RigiSDK17ServerCredentialsV",
-        "mangledName": "$s7RigiSDK17ServerCredentialsV",
-        "moduleName": "RigiSDK",
-        "declAttributes": [
-          "AccessControl"
-        ],
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          }
         ]
       },
       {
@@ -1537,77 +1589,90 @@
       },
       {
         "kind": "TypeDecl",
-        "name": "RigiScreenshotter",
-        "printedName": "RigiScreenshotter",
+        "name": "RigiPreviews",
+        "printedName": "RigiPreviews",
         "children": [
           {
-            "kind": "Function",
-            "name": "appWindow",
-            "printedName": "appWindow()",
+            "kind": "Var",
+            "name": "shared",
+            "printedName": "shared",
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "UIKit.UIWindow?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "UIWindow",
-                    "printedName": "UIKit.UIWindow",
-                    "usr": "c:objc(cs)UIWindow"
-                  }
-                ],
-                "usr": "s:Sq"
+                "name": "RigiPreviews",
+                "printedName": "RigiSDK.RigiPreviews",
+                "usr": "s:7RigiSDK0A8PreviewsC"
               }
             ],
-            "declKind": "Func",
-            "usr": "s:7RigiSDK0A13ScreenshotterC9appWindowSo8UIWindowCSgyFZ",
-            "mangledName": "$s7RigiSDK0A13ScreenshotterC9appWindowSo8UIWindowCSgyFZ",
+            "declKind": "Var",
+            "usr": "s:7RigiSDK0A8PreviewsC6sharedACvpZ",
+            "mangledName": "$s7RigiSDK0A8PreviewsC6sharedACvpZ",
             "moduleName": "RigiSDK",
             "static": true,
             "declAttributes": [
+              "HasInitialValue",
               "Final",
-              "AccessControl",
-              "Custom"
+              "HasStorage",
+              "AccessControl"
             ],
-            "funcSelfKind": "NonMutating"
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "RigiPreviews",
+                    "printedName": "RigiSDK.RigiPreviews",
+                    "usr": "s:7RigiSDK0A8PreviewsC"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7RigiSDK0A8PreviewsC6sharedACvgZ",
+                "mangledName": "$s7RigiSDK0A8PreviewsC6sharedACvgZ",
+                "moduleName": "RigiSDK",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
           },
           {
             "kind": "Function",
-            "name": "getScreenshot",
-            "printedName": "getScreenshot()",
+            "name": "savePreview",
+            "printedName": "savePreview(scanResult:)",
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "UIKit.UIImage?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "UIImage",
-                    "printedName": "UIKit.UIImage",
-                    "usr": "c:objc(cs)UIImage"
-                  }
-                ],
-                "usr": "s:Sq"
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ScanResult",
+                "printedName": "RigiSDK.ScanResult",
+                "usr": "s:7RigiSDK10ScanResultV"
               }
             ],
             "declKind": "Func",
-            "usr": "s:7RigiSDK0A13ScreenshotterC13getScreenshotSo7UIImageCSgyFZ",
-            "mangledName": "$s7RigiSDK0A13ScreenshotterC13getScreenshotSo7UIImageCSgyFZ",
+            "usr": "s:7RigiSDK0A8PreviewsC11savePreview10scanResultyAA04ScanG0V_tF",
+            "mangledName": "$s7RigiSDK0A8PreviewsC11savePreview10scanResultyAA04ScanG0V_tF",
             "moduleName": "RigiSDK",
-            "static": true,
             "declAttributes": [
-              "Final",
-              "AccessControl",
-              "Custom"
+              "AccessControl"
             ],
             "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Class",
-        "usr": "s:7RigiSDK0A13ScreenshotterC",
-        "mangledName": "$s7RigiSDK0A13ScreenshotterC",
+        "usr": "s:7RigiSDK0A8PreviewsC",
+        "mangledName": "$s7RigiSDK0A8PreviewsC",
         "moduleName": "RigiSDK",
         "declAttributes": [
           "AccessControl"
@@ -1638,16 +1703,65 @@
         "moduleName": "RigiSDK"
       },
       {
-        "kind": "Import",
-        "name": "SwiftUI",
-        "printedName": "SwiftUI",
-        "declKind": "Import",
-        "moduleName": "RigiSDK"
+        "kind": "TypeDecl",
+        "name": "ScanResult",
+        "printedName": "ScanResult",
+        "declKind": "Struct",
+        "usr": "s:7RigiSDK10ScanResultV",
+        "mangledName": "$s7RigiSDK10ScanResultV",
+        "moduleName": "RigiSDK",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
       },
       {
         "kind": "TypeDecl",
-        "name": "RigiButtonManager",
-        "printedName": "RigiButtonManager",
+        "name": "LabelInfo",
+        "printedName": "LabelInfo",
+        "declKind": "Struct",
+        "usr": "s:7RigiSDK9LabelInfoV",
+        "mangledName": "$s7RigiSDK9LabelInfoV",
+        "moduleName": "RigiSDK",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "RigiScanner",
+        "printedName": "RigiScanner",
         "children": [
           {
             "kind": "Var",
@@ -1656,14 +1770,14 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "RigiButtonManager",
-                "printedName": "RigiSDK.RigiButtonManager",
-                "usr": "s:7RigiSDK0A13ButtonManagerC"
+                "name": "RigiScanner",
+                "printedName": "RigiSDK.RigiScanner",
+                "usr": "s:7RigiSDK0A7ScannerC"
               }
             ],
             "declKind": "Var",
-            "usr": "s:7RigiSDK0A13ButtonManagerC6sharedACvpZ",
-            "mangledName": "$s7RigiSDK0A13ButtonManagerC6sharedACvpZ",
+            "usr": "s:7RigiSDK0A7ScannerC6sharedACvpZ",
+            "mangledName": "$s7RigiSDK0A7ScannerC6sharedACvpZ",
             "moduleName": "RigiSDK",
             "static": true,
             "declAttributes": [
@@ -1682,14 +1796,14 @@
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "RigiButtonManager",
-                    "printedName": "RigiSDK.RigiButtonManager",
-                    "usr": "s:7RigiSDK0A13ButtonManagerC"
+                    "name": "RigiScanner",
+                    "printedName": "RigiSDK.RigiScanner",
+                    "usr": "s:7RigiSDK0A7ScannerC"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:7RigiSDK0A13ButtonManagerC6sharedACvgZ",
-                "mangledName": "$s7RigiSDK0A13ButtonManagerC6sharedACvgZ",
+                "usr": "s:7RigiSDK0A7ScannerC6sharedACvgZ",
+                "mangledName": "$s7RigiSDK0A7ScannerC6sharedACvgZ",
                 "moduleName": "RigiSDK",
                 "static": true,
                 "implicit": true,
@@ -1701,30 +1815,173 @@
             ]
           },
           {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init()",
+            "kind": "Function",
+            "name": "performScan",
+            "printedName": "performScan()",
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "RigiButtonManager",
-                "printedName": "RigiSDK.RigiButtonManager",
-                "usr": "s:7RigiSDK0A13ButtonManagerC"
+                "name": "Void",
+                "printedName": "()"
               }
             ],
-            "declKind": "Constructor",
-            "usr": "s:7RigiSDK0A13ButtonManagerCACycfc",
-            "mangledName": "$s7RigiSDK0A13ButtonManagerCACycfc",
+            "declKind": "Func",
+            "usr": "s:7RigiSDK0A7ScannerC11performScanyyYaF",
+            "mangledName": "$s7RigiSDK0A7ScannerC11performScanyyYaF",
             "moduleName": "RigiSDK",
             "declAttributes": [
               "AccessControl"
             ],
-            "init_kind": "Designated"
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:7RigiSDK0A7ScannerC",
+        "mangledName": "$s7RigiSDK0A7ScannerC",
+        "moduleName": "RigiSDK",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "RigiSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Rigi",
+        "printedName": "Rigi",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "version",
+            "printedName": "version",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:7RigiSDK0A0C7versionSSvpZ",
+            "mangledName": "$s7RigiSDK0A0C7versionSSvpZ",
+            "moduleName": "RigiSDK",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7RigiSDK0A0C7versionSSvgZ",
+                "mangledName": "$s7RigiSDK0A0C7versionSSvgZ",
+                "moduleName": "RigiSDK",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "shared",
+            "printedName": "shared",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Rigi",
+                "printedName": "RigiSDK.Rigi",
+                "usr": "s:7RigiSDK0A0C"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:7RigiSDK0A0C6sharedACvpZ",
+            "mangledName": "$s7RigiSDK0A0C6sharedACvpZ",
+            "moduleName": "RigiSDK",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Rigi",
+                    "printedName": "RigiSDK.Rigi",
+                    "usr": "s:7RigiSDK0A0C"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7RigiSDK0A0C6sharedACvgZ",
+                "mangledName": "$s7RigiSDK0A0C6sharedACvgZ",
+                "moduleName": "RigiSDK",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
           },
           {
             "kind": "Function",
-            "name": "initButton",
-            "printedName": "initButton(callback:)",
+            "name": "start",
+            "printedName": "start(_:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -1732,36 +1989,48 @@
                 "printedName": "()"
               },
               {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "() async -> ()",
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((inout RigiSDK.RigiSettings) -> ())?",
                 "children": [
                   {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(inout RigiSDK.RigiSettings) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "RigiSettings",
+                        "printedName": "RigiSDK.RigiSettings",
+                        "usr": "s:7RigiSDK0A8SettingsV"
+                      }
+                    ]
                   }
-                ]
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Func",
-            "usr": "s:7RigiSDK0A13ButtonManagerC04initC08callbackyyyYac_tF",
-            "mangledName": "$s7RigiSDK0A13ButtonManagerC04initC08callbackyyyYac_tF",
+            "usr": "s:7RigiSDK0A0C5startyyyAA0A8SettingsVzcSgFZ",
+            "mangledName": "$s7RigiSDK0A0C5startyyyAA0A8SettingsVzcSgFZ",
             "moduleName": "RigiSDK",
+            "static": true,
             "declAttributes": [
+              "Final",
               "AccessControl"
             ],
             "funcSelfKind": "NonMutating"
           },
           {
             "kind": "Function",
-            "name": "hideButton",
-            "printedName": "hideButton()",
+            "name": "launch",
+            "printedName": "launch()",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -1770,44 +2039,23 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:7RigiSDK0A13ButtonManagerC04hideC0yyF",
-            "mangledName": "$s7RigiSDK0A13ButtonManagerC04hideC0yyF",
+            "usr": "s:7RigiSDK0A0C6launchyyF",
+            "mangledName": "$s7RigiSDK0A0C6launchyyF",
             "moduleName": "RigiSDK",
             "declAttributes": [
-              "AccessControl",
-              "Custom"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "showButton",
-            "printedName": "showButton()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:7RigiSDK0A13ButtonManagerC04showC0yyF",
-            "mangledName": "$s7RigiSDK0A13ButtonManagerC04showC0yyF",
-            "moduleName": "RigiSDK",
-            "declAttributes": [
-              "AccessControl",
-              "Custom"
+              "AccessControl"
             ],
             "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Class",
-        "usr": "s:7RigiSDK0A13ButtonManagerC",
-        "mangledName": "$s7RigiSDK0A13ButtonManagerC",
+        "usr": "s:7RigiSDK0A0C",
+        "mangledName": "$s7RigiSDK0A0C",
         "moduleName": "RigiSDK",
         "declAttributes": [
           "AccessControl"
         ],
+        "hasMissingDesignatedInitializers": true,
         "conformances": [
           {
             "kind": "Conformance",
@@ -5401,171 +5649,6 @@
       },
       {
         "kind": "Import",
-        "name": "UIKit",
-        "printedName": "UIKit",
-        "declKind": "Import",
-        "moduleName": "RigiSDK"
-      },
-      {
-        "kind": "TypeDecl",
-        "name": "ScanResult",
-        "printedName": "ScanResult",
-        "declKind": "Struct",
-        "usr": "s:7RigiSDK10ScanResultV",
-        "mangledName": "$s7RigiSDK10ScanResultV",
-        "moduleName": "RigiSDK",
-        "declAttributes": [
-          "AccessControl"
-        ],
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          }
-        ]
-      },
-      {
-        "kind": "TypeDecl",
-        "name": "LabelInfo",
-        "printedName": "LabelInfo",
-        "declKind": "Struct",
-        "usr": "s:7RigiSDK9LabelInfoV",
-        "mangledName": "$s7RigiSDK9LabelInfoV",
-        "moduleName": "RigiSDK",
-        "declAttributes": [
-          "AccessControl"
-        ],
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          }
-        ]
-      },
-      {
-        "kind": "TypeDecl",
-        "name": "RigiScanner",
-        "printedName": "RigiScanner",
-        "children": [
-          {
-            "kind": "Var",
-            "name": "shared",
-            "printedName": "shared",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "RigiScanner",
-                "printedName": "RigiSDK.RigiScanner",
-                "usr": "s:7RigiSDK0A7ScannerC"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:7RigiSDK0A7ScannerC6sharedACvpZ",
-            "mangledName": "$s7RigiSDK0A7ScannerC6sharedACvpZ",
-            "moduleName": "RigiSDK",
-            "static": true,
-            "declAttributes": [
-              "HasInitialValue",
-              "Final",
-              "HasStorage",
-              "AccessControl"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "RigiScanner",
-                    "printedName": "RigiSDK.RigiScanner",
-                    "usr": "s:7RigiSDK0A7ScannerC"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:7RigiSDK0A7ScannerC6sharedACvgZ",
-                "mangledName": "$s7RigiSDK0A7ScannerC6sharedACvgZ",
-                "moduleName": "RigiSDK",
-                "static": true,
-                "implicit": true,
-                "declAttributes": [
-                  "Final"
-                ],
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Function",
-            "name": "performScan",
-            "printedName": "performScan()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:7RigiSDK0A7ScannerC11performScanyyYaF",
-            "mangledName": "$s7RigiSDK0A7ScannerC11performScanyyYaF",
-            "moduleName": "RigiSDK",
-            "declAttributes": [
-              "AccessControl"
-            ],
-            "funcSelfKind": "NonMutating"
-          }
-        ],
-        "declKind": "Class",
-        "usr": "s:7RigiSDK0A7ScannerC",
-        "mangledName": "$s7RigiSDK0A7ScannerC",
-        "moduleName": "RigiSDK",
-        "declAttributes": [
-          "AccessControl"
-        ],
-        "hasMissingDesignatedInitializers": true,
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          }
-        ]
-      },
-      {
-        "kind": "Import",
         "name": "SwiftUI",
         "printedName": "SwiftUI",
         "declKind": "Import",
@@ -5704,71 +5787,10 @@
         "moduleName": "RigiSDK"
       },
       {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "RigiSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
         "kind": "TypeDecl",
-        "name": "Rigi",
-        "printedName": "Rigi",
+        "name": "RigiButtonManager",
+        "printedName": "RigiButtonManager",
         "children": [
-          {
-            "kind": "Var",
-            "name": "version",
-            "printedName": "version",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:7RigiSDK0A0C7versionSSvpZ",
-            "mangledName": "$s7RigiSDK0A0C7versionSSvpZ",
-            "moduleName": "RigiSDK",
-            "static": true,
-            "declAttributes": [
-              "HasInitialValue",
-              "Final",
-              "HasStorage",
-              "AccessControl"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:7RigiSDK0A0C7versionSSvgZ",
-                "mangledName": "$s7RigiSDK0A0C7versionSSvgZ",
-                "moduleName": "RigiSDK",
-                "static": true,
-                "implicit": true,
-                "declAttributes": [
-                  "Final"
-                ],
-                "accessorKind": "get"
-              }
-            ]
-          },
           {
             "kind": "Var",
             "name": "shared",
@@ -5776,22 +5798,21 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "Rigi",
-                "printedName": "RigiSDK.Rigi",
-                "usr": "s:7RigiSDK0A0C"
+                "name": "RigiButtonManager",
+                "printedName": "RigiSDK.RigiButtonManager",
+                "usr": "s:7RigiSDK0A13ButtonManagerC"
               }
             ],
             "declKind": "Var",
-            "usr": "s:7RigiSDK0A0C6sharedACvpZ",
-            "mangledName": "$s7RigiSDK0A0C6sharedACvpZ",
+            "usr": "s:7RigiSDK0A13ButtonManagerC6sharedACvpZ",
+            "mangledName": "$s7RigiSDK0A13ButtonManagerC6sharedACvpZ",
             "moduleName": "RigiSDK",
             "static": true,
             "declAttributes": [
               "HasInitialValue",
               "Final",
               "HasStorage",
-              "AccessControl",
-              "RawDocComment"
+              "AccessControl"
             ],
             "isLet": true,
             "hasStorage": true,
@@ -5803,14 +5824,14 @@
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "Rigi",
-                    "printedName": "RigiSDK.Rigi",
-                    "usr": "s:7RigiSDK0A0C"
+                    "name": "RigiButtonManager",
+                    "printedName": "RigiSDK.RigiButtonManager",
+                    "usr": "s:7RigiSDK0A13ButtonManagerC"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:7RigiSDK0A0C6sharedACvgZ",
-                "mangledName": "$s7RigiSDK0A0C6sharedACvgZ",
+                "usr": "s:7RigiSDK0A13ButtonManagerC6sharedACvgZ",
+                "mangledName": "$s7RigiSDK0A13ButtonManagerC6sharedACvgZ",
                 "moduleName": "RigiSDK",
                 "static": true,
                 "implicit": true,
@@ -5822,9 +5843,30 @@
             ]
           },
           {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "RigiButtonManager",
+                "printedName": "RigiSDK.RigiButtonManager",
+                "usr": "s:7RigiSDK0A13ButtonManagerC"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:7RigiSDK0A13ButtonManagerCACycfc",
+            "mangledName": "$s7RigiSDK0A13ButtonManagerCACycfc",
+            "moduleName": "RigiSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
             "kind": "Function",
-            "name": "start",
-            "printedName": "start(_:)",
+            "name": "initButton",
+            "printedName": "initButton(callback:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -5832,48 +5874,36 @@
                 "printedName": "()"
               },
               {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "((inout RigiSDK.RigiSettings) -> ())?",
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() async -> ()",
                 "children": [
                   {
-                    "kind": "TypeFunc",
-                    "name": "Function",
-                    "printedName": "(inout RigiSDK.RigiSettings) -> ()",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Void",
-                        "printedName": "()"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "RigiSettings",
-                        "printedName": "RigiSDK.RigiSettings",
-                        "usr": "s:7RigiSDK0A8SettingsV"
-                      }
-                    ]
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
                   }
-                ],
-                "hasDefaultArg": true,
-                "usr": "s:Sq"
+                ]
               }
             ],
             "declKind": "Func",
-            "usr": "s:7RigiSDK0A0C5startyyyAA0A8SettingsVzcSgFZ",
-            "mangledName": "$s7RigiSDK0A0C5startyyyAA0A8SettingsVzcSgFZ",
+            "usr": "s:7RigiSDK0A13ButtonManagerC04initC08callbackyyyYac_tF",
+            "mangledName": "$s7RigiSDK0A13ButtonManagerC04initC08callbackyyyYac_tF",
             "moduleName": "RigiSDK",
-            "static": true,
             "declAttributes": [
-              "Final",
               "AccessControl"
             ],
             "funcSelfKind": "NonMutating"
           },
           {
             "kind": "Function",
-            "name": "launch",
-            "printedName": "launch()",
+            "name": "hideButton",
+            "printedName": "hideButton()",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -5882,23 +5912,44 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:7RigiSDK0A0C6launchyyF",
-            "mangledName": "$s7RigiSDK0A0C6launchyyF",
+            "usr": "s:7RigiSDK0A13ButtonManagerC04hideC0yyF",
+            "mangledName": "$s7RigiSDK0A13ButtonManagerC04hideC0yyF",
             "moduleName": "RigiSDK",
             "declAttributes": [
-              "AccessControl"
+              "AccessControl",
+              "Custom"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "showButton",
+            "printedName": "showButton()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:7RigiSDK0A13ButtonManagerC04showC0yyF",
+            "mangledName": "$s7RigiSDK0A13ButtonManagerC04showC0yyF",
+            "moduleName": "RigiSDK",
+            "declAttributes": [
+              "AccessControl",
+              "Custom"
             ],
             "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Class",
-        "usr": "s:7RigiSDK0A0C",
-        "mangledName": "$s7RigiSDK0A0C",
+        "usr": "s:7RigiSDK0A13ButtonManagerC",
+        "mangledName": "$s7RigiSDK0A13ButtonManagerC",
         "moduleName": "RigiSDK",
         "declAttributes": [
           "AccessControl"
         ],
-        "hasMissingDesignatedInitializers": true,
         "conformances": [
           {
             "kind": "Conformance",
@@ -5925,90 +5976,77 @@
       },
       {
         "kind": "TypeDecl",
-        "name": "RigiPreviews",
-        "printedName": "RigiPreviews",
+        "name": "RigiScreenshotter",
+        "printedName": "RigiScreenshotter",
         "children": [
           {
-            "kind": "Var",
-            "name": "shared",
-            "printedName": "shared",
+            "kind": "Function",
+            "name": "appWindow",
+            "printedName": "appWindow()",
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "RigiPreviews",
-                "printedName": "RigiSDK.RigiPreviews",
-                "usr": "s:7RigiSDK0A8PreviewsC"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:7RigiSDK0A8PreviewsC6sharedACvpZ",
-            "mangledName": "$s7RigiSDK0A8PreviewsC6sharedACvpZ",
-            "moduleName": "RigiSDK",
-            "static": true,
-            "declAttributes": [
-              "HasInitialValue",
-              "Final",
-              "HasStorage",
-              "AccessControl"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
+                "name": "Optional",
+                "printedName": "UIKit.UIWindow?",
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "RigiPreviews",
-                    "printedName": "RigiSDK.RigiPreviews",
-                    "usr": "s:7RigiSDK0A8PreviewsC"
+                    "name": "UIWindow",
+                    "printedName": "UIKit.UIWindow",
+                    "usr": "c:objc(cs)UIWindow"
                   }
                 ],
-                "declKind": "Accessor",
-                "usr": "s:7RigiSDK0A8PreviewsC6sharedACvgZ",
-                "mangledName": "$s7RigiSDK0A8PreviewsC6sharedACvgZ",
-                "moduleName": "RigiSDK",
-                "static": true,
-                "implicit": true,
-                "declAttributes": [
-                  "Final"
-                ],
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Function",
-            "name": "savePreview",
-            "printedName": "savePreview(scanResult:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "ScanResult",
-                "printedName": "RigiSDK.ScanResult",
-                "usr": "s:7RigiSDK10ScanResultV"
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Func",
-            "usr": "s:7RigiSDK0A8PreviewsC11savePreview10scanResultyAA04ScanG0V_tF",
-            "mangledName": "$s7RigiSDK0A8PreviewsC11savePreview10scanResultyAA04ScanG0V_tF",
+            "usr": "s:7RigiSDK0A13ScreenshotterC9appWindowSo8UIWindowCSgyFZ",
+            "mangledName": "$s7RigiSDK0A13ScreenshotterC9appWindowSo8UIWindowCSgyFZ",
             "moduleName": "RigiSDK",
+            "static": true,
             "declAttributes": [
-              "AccessControl"
+              "Final",
+              "AccessControl",
+              "Custom"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getScreenshot",
+            "printedName": "getScreenshot()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIImage?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIImage",
+                    "printedName": "UIKit.UIImage",
+                    "usr": "c:objc(cs)UIImage"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:7RigiSDK0A13ScreenshotterC13getScreenshotSo7UIImageCSgyFZ",
+            "mangledName": "$s7RigiSDK0A13ScreenshotterC13getScreenshotSo7UIImageCSgyFZ",
+            "moduleName": "RigiSDK",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "Custom"
             ],
             "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Class",
-        "usr": "s:7RigiSDK0A8PreviewsC",
-        "mangledName": "$s7RigiSDK0A8PreviewsC",
+        "usr": "s:7RigiSDK0A13ScreenshotterC",
+        "mangledName": "$s7RigiSDK0A13ScreenshotterC",
         "moduleName": "RigiSDK",
         "declAttributes": [
           "AccessControl"
@@ -6033,6 +6071,20 @@
       },
       {
         "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "RigiSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "RigiSDK"
+      },
+      {
+        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -6043,24 +6095,117 @@
       },
       {
         "kind": "TypeDecl",
-        "name": "RigiIni",
-        "printedName": "RigiIni",
+        "name": "RigiFileSystem",
+        "printedName": "RigiFileSystem",
         "children": [
           {
             "kind": "Var",
-            "name": "shared",
-            "printedName": "shared",
+            "name": "rigiDir",
+            "printedName": "rigiDir",
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "RigiIni",
-                "printedName": "RigiSDK.RigiIni",
-                "usr": "s:7RigiSDK0A3IniC"
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Var",
-            "usr": "s:7RigiSDK0A3IniC6sharedACvpZ",
-            "mangledName": "$s7RigiSDK0A3IniC6sharedACvpZ",
+            "usr": "s:7RigiSDK0A10FileSystemC7rigiDirSSSgvpZ",
+            "mangledName": "$s7RigiSDK0A10FileSystemC7rigiDirSSSgvpZ",
+            "moduleName": "RigiSDK",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7RigiSDK0A10FileSystemC7rigiDirSSSgvgZ",
+                "mangledName": "$s7RigiSDK0A10FileSystemC7rigiDirSSSgvgZ",
+                "moduleName": "RigiSDK",
+                "static": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:7RigiSDK0A10FileSystemC",
+        "mangledName": "$s7RigiSDK0A10FileSystemC",
+        "moduleName": "RigiSDK",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "RigiDebug",
+        "printedName": "RigiDebug",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "data",
+            "printedName": "data",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:7RigiSDK0A5DebugC4dataSSvpZ",
+            "mangledName": "$s7RigiSDK0A5DebugC4dataSSvpZ",
             "moduleName": "RigiSDK",
             "static": true,
             "declAttributes": [
@@ -6069,7 +6214,6 @@
               "HasStorage",
               "AccessControl"
             ],
-            "isLet": true,
             "hasStorage": true,
             "accessors": [
               {
@@ -6079,14 +6223,14 @@
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "RigiIni",
-                    "printedName": "RigiSDK.RigiIni",
-                    "usr": "s:7RigiSDK0A3IniC"
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:7RigiSDK0A3IniC6sharedACvgZ",
-                "mangledName": "$s7RigiSDK0A3IniC6sharedACvgZ",
+                "usr": "s:7RigiSDK0A5DebugC4dataSSvgZ",
+                "mangledName": "$s7RigiSDK0A5DebugC4dataSSvgZ",
                 "moduleName": "RigiSDK",
                 "static": true,
                 "implicit": true,
@@ -6094,95 +6238,16 @@
                   "Final"
                 ],
                 "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Function",
-            "name": "load",
-            "printedName": "load(from:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
               },
               {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "hasDefaultArg": true,
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:7RigiSDK0A3IniC4load4fromySSSg_tKF",
-            "mangledName": "$s7RigiSDK0A3IniC4load4fromySSSg_tKF",
-            "moduleName": "RigiSDK",
-            "declAttributes": [
-              "AccessControl"
-            ],
-            "throwing": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "value",
-            "printedName": "value(for:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:7RigiSDK0A3IniC5value3forSSSgSS_tF",
-            "mangledName": "$s7RigiSDK0A3IniC5value3forSSSgSS_tF",
-            "moduleName": "RigiSDK",
-            "declAttributes": [
-              "AccessControl"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Var",
-            "name": "allSettings",
-            "printedName": "allSettings",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Dictionary",
-                "printedName": "[Swift.String : Swift.String]",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
+                    "name": "Void",
+                    "printedName": "()"
                   },
                   {
                     "kind": "TypeNominal",
@@ -6191,78 +6256,73 @@
                     "usr": "s:SS"
                   }
                 ],
-                "usr": "s:SD"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:7RigiSDK0A3IniC11allSettingsSDyS2SGvp",
-            "mangledName": "$s7RigiSDK0A3IniC11allSettingsSDyS2SGvp",
-            "moduleName": "RigiSDK",
-            "declAttributes": [
-              "AccessControl"
-            ],
-            "accessors": [
+                "declKind": "Accessor",
+                "usr": "s:7RigiSDK0A5DebugC4dataSSvsZ",
+                "mangledName": "$s7RigiSDK0A5DebugC4dataSSvsZ",
+                "moduleName": "RigiSDK",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "set"
+              },
               {
                 "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
+                "name": "Modify",
+                "printedName": "Modify()",
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "Dictionary",
-                    "printedName": "[Swift.String : Swift.String]",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      }
-                    ],
-                    "usr": "s:SD"
+                    "name": "Void",
+                    "printedName": "()"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:7RigiSDK0A3IniC11allSettingsSDyS2SGvg",
-                "mangledName": "$s7RigiSDK0A3IniC11allSettingsSDyS2SGvg",
+                "usr": "s:7RigiSDK0A5DebugC4dataSSvMZ",
+                "mangledName": "$s7RigiSDK0A5DebugC4dataSSvMZ",
                 "moduleName": "RigiSDK",
-                "accessorKind": "get"
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
               }
             ]
           },
           {
             "kind": "Function",
-            "name": "getServerCredentials",
-            "printedName": "getServerCredentials()",
+            "name": "clear",
+            "printedName": "clear()",
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "ServerCredentials",
-                "printedName": "RigiSDK.ServerCredentials",
-                "usr": "s:7RigiSDK17ServerCredentialsV"
+                "name": "Void",
+                "printedName": "()"
               }
             ],
             "declKind": "Func",
-            "usr": "s:7RigiSDK0A3IniC20getServerCredentialsAA0eF0VyKF",
-            "mangledName": "$s7RigiSDK0A3IniC20getServerCredentialsAA0eF0VyKF",
+            "usr": "s:7RigiSDK0A5DebugC5clearyyFZ",
+            "mangledName": "$s7RigiSDK0A5DebugC5clearyyFZ",
             "moduleName": "RigiSDK",
+            "static": true,
             "declAttributes": [
+              "Final",
               "AccessControl"
             ],
-            "throwing": true,
             "funcSelfKind": "NonMutating"
           },
           {
             "kind": "Function",
-            "name": "getProjectUrl",
-            "printedName": "getProjectUrl()",
+            "name": "add",
+            "printedName": "add(_:)",
             "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
               {
                 "kind": "TypeNominal",
                 "name": "String",
@@ -6271,122 +6331,24 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:7RigiSDK0A3IniC13getProjectUrlSSyKF",
-            "mangledName": "$s7RigiSDK0A3IniC13getProjectUrlSSyKF",
+            "usr": "s:7RigiSDK0A5DebugC3addyySSFZ",
+            "mangledName": "$s7RigiSDK0A5DebugC3addyySSFZ",
             "moduleName": "RigiSDK",
+            "static": true,
             "declAttributes": [
-              "AccessControl"
-            ],
-            "throwing": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "getSourceLanguage",
-            "printedName": "getSourceLanguage()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:7RigiSDK0A3IniC17getSourceLanguageSSSgyF",
-            "mangledName": "$s7RigiSDK0A3IniC17getSourceLanguageSSSgyF",
-            "moduleName": "RigiSDK",
-            "declAttributes": [
-              "AccessControl"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "getPseudoLanguage",
-            "printedName": "getPseudoLanguage()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:7RigiSDK0A3IniC17getPseudoLanguageSSSgyF",
-            "mangledName": "$s7RigiSDK0A3IniC17getPseudoLanguageSSSgyF",
-            "moduleName": "RigiSDK",
-            "declAttributes": [
-              "AccessControl"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "pseudoPrefix",
-            "printedName": "pseudoPrefix()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:7RigiSDK0A3IniC12pseudoPrefixSSyF",
-            "mangledName": "$s7RigiSDK0A3IniC12pseudoPrefixSSyF",
-            "moduleName": "RigiSDK",
-            "declAttributes": [
-              "AccessControl"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "pseudoSuffix",
-            "printedName": "pseudoSuffix()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:7RigiSDK0A3IniC12pseudoSuffixSSyF",
-            "mangledName": "$s7RigiSDK0A3IniC12pseudoSuffixSSyF",
-            "moduleName": "RigiSDK",
-            "declAttributes": [
+              "Final",
               "AccessControl"
             ],
             "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Class",
-        "usr": "s:7RigiSDK0A3IniC",
-        "mangledName": "$s7RigiSDK0A3IniC",
+        "usr": "s:7RigiSDK0A5DebugC",
+        "mangledName": "$s7RigiSDK0A5DebugC",
         "moduleName": "RigiSDK",
         "declAttributes": [
-          "AccessControl"
+          "AccessControl",
+          "RawDocComment"
         ],
         "hasMissingDesignatedInitializers": true,
         "conformances": [
@@ -6823,6 +6785,44 @@
           "AccessControl"
         ],
         "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "RigiSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ServerCredentials",
+        "printedName": "ServerCredentials",
+        "declKind": "Struct",
+        "usr": "s:7RigiSDK17ServerCredentialsV",
+        "mangledName": "$s7RigiSDK17ServerCredentialsV",
+        "moduleName": "RigiSDK",
+        "declAttributes": [
+          "AccessControl"
+        ],
         "conformances": [
           {
             "kind": "Conformance",
@@ -7645,11 +7645,11 @@
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/dimi\/Projects\/Xcode\/Rigi\/rigi-ios-sdk\/Source\/Sources\/RigiCore\/RigiDebug.swift",
-      "kind": "StringLiteral",
-      "offset": 147,
-      "length": 2,
-      "value": "\"\""
+      "filePath": "\/Users\/dimi\/Projects\/Xcode\/Rigi\/rigi-ios-sdk\/Source\/Sources\/RigiCore\/RigiIni.swift",
+      "kind": "Dictionary",
+      "offset": 245,
+      "length": 3,
+      "value": "[]"
     },
     {
       "filePath": "\/Users\/dimi\/Projects\/Xcode\/Rigi\/rigi-ios-sdk\/Source\/Sources\/RigiCore\/RigiStrings.swift",
@@ -7694,16 +7694,23 @@
       "value": "\"error\""
     },
     {
-      "filePath": "\/Users\/dimi\/Projects\/Xcode\/Rigi\/rigi-ios-sdk\/Source\/Sources\/RigiSDK\/RigiButton.swift",
+      "filePath": "\/Users\/dimi\/Projects\/Xcode\/Rigi\/rigi-ios-sdk\/Source\/Sources\/RigiSDK\/RigiPreviews.swift",
       "kind": "IntegerLiteral",
-      "offset": 416,
-      "length": 2,
-      "value": "60"
+      "offset": 403,
+      "length": 1,
+      "value": "1"
     },
     {
-      "filePath": "\/Users\/dimi\/Projects\/Xcode\/Rigi\/rigi-ios-sdk\/Source\/Sources\/RigiSDK\/RigiButton.swift",
+      "filePath": "\/Users\/dimi\/Projects\/Xcode\/Rigi\/rigi-ios-sdk\/Source\/Sources\/RigiSDK\/Rigi.swift",
+      "kind": "StringLiteral",
+      "offset": 191,
+      "length": 7,
+      "value": "\"0.9.4\""
+    },
+    {
+      "filePath": "\/Users\/dimi\/Projects\/Xcode\/Rigi\/rigi-ios-sdk\/Source\/Sources\/RigiSDK\/Rigi.swift",
       "kind": "BooleanLiteral",
-      "offset": 450,
+      "offset": 352,
       "length": 5,
       "value": "false"
     },
@@ -7946,6 +7953,20 @@
       "value": "[]"
     },
     {
+      "filePath": "\/Users\/dimi\/Projects\/Xcode\/Rigi\/rigi-ios-sdk\/Source\/Sources\/RigiSDK\/RigiButton.swift",
+      "kind": "IntegerLiteral",
+      "offset": 416,
+      "length": 2,
+      "value": "60"
+    },
+    {
+      "filePath": "\/Users\/dimi\/Projects\/Xcode\/Rigi\/rigi-ios-sdk\/Source\/Sources\/RigiSDK\/RigiButton.swift",
+      "kind": "BooleanLiteral",
+      "offset": 450,
+      "length": 5,
+      "value": "false"
+    },
+    {
       "filePath": "\/Users\/dimi\/Projects\/Xcode\/Rigi\/rigi-ios-sdk\/Source\/Sources\/RigiSDK\/RigiScreenshotAnalyser.swift",
       "kind": "IntegerLiteral",
       "offset": 551,
@@ -7953,32 +7974,11 @@
       "value": "4"
     },
     {
-      "filePath": "\/Users\/dimi\/Projects\/Xcode\/Rigi\/rigi-ios-sdk\/Source\/Sources\/RigiSDK\/Rigi.swift",
+      "filePath": "\/Users\/dimi\/Projects\/Xcode\/Rigi\/rigi-ios-sdk\/Source\/Sources\/RigiCore\/RigiDebug.swift",
       "kind": "StringLiteral",
-      "offset": 191,
-      "length": 7,
-      "value": "\"0.9.3\""
-    },
-    {
-      "filePath": "\/Users\/dimi\/Projects\/Xcode\/Rigi\/rigi-ios-sdk\/Source\/Sources\/RigiSDK\/Rigi.swift",
-      "kind": "BooleanLiteral",
-      "offset": 352,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/dimi\/Projects\/Xcode\/Rigi\/rigi-ios-sdk\/Source\/Sources\/RigiSDK\/RigiPreviews.swift",
-      "kind": "IntegerLiteral",
-      "offset": 403,
-      "length": 1,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/dimi\/Projects\/Xcode\/Rigi\/rigi-ios-sdk\/Source\/Sources\/RigiCore\/RigiIni.swift",
-      "kind": "Dictionary",
-      "offset": 245,
-      "length": 3,
-      "value": "[]"
+      "offset": 147,
+      "length": 2,
+      "value": "\"\""
     },
     {
       "filePath": "\/Users\/dimi\/Projects\/Xcode\/Rigi\/rigi-ios-sdk\/Source\/Sources\/RigiCore\/RigiCommands.swift",
